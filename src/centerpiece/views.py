@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('<h1>No place like ~/</h1>')
+    return render(request, 'centerpiece/index.html', context={})

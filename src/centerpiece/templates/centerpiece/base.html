@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="PartTimeHarmacist">
+        <title>{% block title %}{% endblock title %}</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        {% block head_js %}
+            {# Provided should additional javascript become necessary in the head #}
+        {% endblock head_js %}
+    </head>
+    <body>
+    {% block body_content %}
+        {# Body content goes here. #}
+    {% endblock body_content %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    {% block body_js %}
+        {% comment "Body JavaScript %}
+            If additional javascript needs to be added to the body tag, it must be added after the bootstrap javascript.
+            This block aims to plan ahead for that stipulation, while not disrupting extended templates later.
+        {% endcomment %}
+    {% endblock body_js %}
+    </body>
+</html>
